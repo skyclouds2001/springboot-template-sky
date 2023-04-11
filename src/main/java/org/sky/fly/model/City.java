@@ -10,7 +10,7 @@ import lombok.Data;
 public class City {
 
     @TableId("id")
-    int id;
+    Integer id;
 
     @TableField("name")
     String name;
@@ -22,6 +22,6 @@ public class City {
     String code;
 
     @TableField("population")
-    int population;
+    Integer population;
 
 }
