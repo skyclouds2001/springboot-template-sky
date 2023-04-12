@@ -6,8 +6,45 @@
     <groupId>org.sky.fly</groupId>
     <artifactId>springboot-template-sky</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
     <name>springboot-template-sky</name>
     <description>springboot template project by sky</description>
+    <url>https://github.com/skyclouds2001/springboot-template-sky/</url>
+    <inceptionYear>2023</inceptionYear>
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>https://mit-license.org/</url>
+        </license>
+    </licenses>
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/skyclouds2001/springboot-template-sky/issues/</url>
+    </issueManagement>
+    <developers>
+        <developer>
+            <id>skyclouds2001</id>
+            <name>skyclouds2001</name>
+            <email>skyclouds2001@163.com</email>
+            <url>https://github.com/skyclouds2001/</url>
+            <roles>
+                <role>Project Manager</role>
+            </roles>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+    <contributors>
+        <contributor>
+            <name>skyclouds2001</name>
+            <email>skyclouds2001@163.com</email>
+            <url>https://github.com/skyclouds2001/</url>
+            <roles>
+                <role>Project Manager</role>
+            </roles>
+            <timezone>+8</timezone>
+        </contributor>
+    </contributors>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -87,6 +124,7 @@
     </dependencies>
 
     <build>
+        <finalName>springboot-template-sky</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
