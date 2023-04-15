@@ -35,7 +35,7 @@ public class CityController {
             @Parameter(name = "size", description = "分页容量", in = ParameterIn.QUERY)
     })
     @GetMapping
-    public Page<City> getCityList(@RequestParam Integer page, @RequestParam Integer size) {
+    public Page<City> getCityList(@RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "10") Integer size) {
         return cityService.page(new Page<>(page, size));
     }
 
