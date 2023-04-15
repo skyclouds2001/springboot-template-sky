@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.sky.fly.model.City;
+import org.sky.fly.result.Result;
 import org.sky.fly.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,8 +27,8 @@ public class CityController {
             @Parameter(name = "id", description = "城市ID", in = ParameterIn.PATH, required = true)
     })
     @GetMapping("/{id}")
-    public City getCity(@PathVariable Integer id) {
-        return cityService.getById(id);
+    public Result<City> getCity(@PathVariable Integer id) {
+        return Result.ok(cityService.getById(id));
     }
 
     @Operation(summary = "获取城市分页列表", method = "GET", parameters = {
@@ -35,34 +36,37 @@ public class CityController {
             @Parameter(name = "size", description = "分页容量", in = ParameterIn.QUERY)
     })
     @GetMapping
-    public Page<City> getCityList(@RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "10") Integer size) {
-        return cityService.page(new Page<>(page, size));
+    public Result<Page<City>> getCityList(@RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "10") Integer size) {
+        return Result.ok(cityService.page(new Page<>(page, size)));
     }
 
     @Operation(summary = "获取城市全部列表", method = "GET")
     @GetMapping("/all")
-    public List<City> getCityList() {
-        return cityService.list();
+    public Result<List<City>> getCityList() {
+        return Result.ok(cityService.list());
     }
 
     @Operation(summary = "添加城市", method = "POST")
     @PostMapping
-    public void addCity(@RequestBody City city) {
+    public Result<?> addCity(@RequestBody City city) {
         cityService.save(city);
+        return Result.ok();
     }
 
     @Operation(summary = "更新城市", method = "PUT")
     @PutMapping
-    public void updateCity(@RequestBody City city) {
+    public Result<?> updateCity(@RequestBody City city) {
         cityService.updateById(city);
+        return Result.ok();
     }
 
     @Operation(summary = "删除城市", method = "DELETE", parameters = {
             @Parameter(name = "id", description = "城市ID", in = ParameterIn.PATH, required = true),
     })
     @DeleteMapping("/{id}")
-    public void removeCity(@PathVariable Integer id) {
+    public Result<?> removeCity(@PathVariable Integer id) {
         cityService.removeById(id);
+        return Result.ok();
     }
 
 }
