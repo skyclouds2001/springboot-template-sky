@@ -29,9 +29,9 @@ public class City implements Serializable {
     @TableField("district")
     String district;
 
-    @Schema(description = "城市所属国家编码", requiredMode = Schema.RequiredMode.REQUIRED, accessMode = Schema.AccessMode.READ_WRITE)
-    @TableField("countrycode")
-    String code;
+    @Schema(description = "城市所属国家名称", requiredMode = Schema.RequiredMode.REQUIRED, accessMode = Schema.AccessMode.READ_WRITE)
+    @TableField("country")
+    String country;
 
     @Schema(description = "城市人口", requiredMode = Schema.RequiredMode.REQUIRED, accessMode = Schema.AccessMode.READ_WRITE)
     @TableField("population")
