@@ -47,4 +47,7 @@ public class City implements Serializable {
     @TableLogic
     private Integer deleted;
 
+    @Version
+    private Integer version;
+
 }
