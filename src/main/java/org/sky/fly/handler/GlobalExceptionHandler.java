@@ -1,6 +1,7 @@
-package org.sky.fly.exception;
+package org.sky.fly.handler;
 
 import lombok.extern.slf4j.Slf4j;
+import org.sky.fly.exception.CustomException;
 import org.sky.fly.result.Result;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
