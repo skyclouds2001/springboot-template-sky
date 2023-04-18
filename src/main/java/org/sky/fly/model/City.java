@@ -19,22 +19,22 @@ public class City implements Serializable {
 
     @Schema(description = "城市ID", requiredMode = Schema.RequiredMode.REQUIRED, accessMode = Schema.AccessMode.READ_WRITE)
     @TableId("id")
-    Integer id;
+    private Integer id;
 
     @Schema(description = "城市名称", requiredMode = Schema.RequiredMode.REQUIRED, accessMode = Schema.AccessMode.READ_WRITE)
     @TableField("name")
-    String name;
+    private String name;
 
     @Schema(description = "城市所属地区名称", requiredMode = Schema.RequiredMode.REQUIRED, accessMode = Schema.AccessMode.READ_WRITE)
     @TableField("district")
-    String district;
+    private String district;
 
     @Schema(description = "城市所属国家名称", requiredMode = Schema.RequiredMode.REQUIRED, accessMode = Schema.AccessMode.READ_WRITE)
     @TableField("country")
-    String country;
+    private String country;
 
     @Schema(description = "城市人口", requiredMode = Schema.RequiredMode.REQUIRED, accessMode = Schema.AccessMode.READ_WRITE)
     @TableField("population")
-    Integer population;
+    private Integer population;
 
 }
