@@ -42,7 +42,7 @@ public class CityController {
 
     @Operation(summary = "获取城市全部列表", method = "GET")
     @GetMapping("/all")
-    public Result<List<City>> getCityList() {
+    public Result<List<City>> getAllCityList() {
         return Result.ok(cityService.list());
     }
 
