@@ -1,12 +1,16 @@
 package org.sky.fly;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.junit.jupiter.api.Test;
 import org.sky.fly.model.City;
 import org.sky.fly.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @SpringBootTest
 public class CityServiceTest {
@@ -16,14 +20,34 @@ public class CityServiceTest {
 
     @Test
     void testSelect() {
-        City city = cityService.getById(0);
+        City city = cityService.getById(1);
         System.out.println(city);
     }
 
     @Test
-    void testGetList() {
-        List<City> list = cityService.list();
-        list.forEach(System.out::println);
+    void testSelectByBatchIds() {
+        List<City> cities = cityService.listByIds(Arrays.asList(1, 2, 3));
+        cities.forEach(System.out::println);
+    }
+
+    @Test
+    void testSelectByBatchConditions() {
+        Map<String, Object> map = new HashMap<>();
+        map.put("district", "Guangdong");
+        List<City> cities = cityService.listByMap(map);
+        cities.forEach(System.out::println);
+    }
+
+    @Test
+    void testSelectPage() {
+        Page<City> page = cityService.page(new Page<>(1, 10));
+        page.getRecords().forEach(System.out::println);
+    }
+
+    @Test
+    void testSelectAll() {
+        List<City> cities = cityService.list();
+        cities.forEach(System.out::println);
     }
 
     @Test
