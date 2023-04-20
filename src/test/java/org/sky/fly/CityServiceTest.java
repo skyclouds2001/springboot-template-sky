@@ -2,7 +2,7 @@ package org.sky.fly;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.junit.jupiter.api.Test;
-import org.sky.fly.model.City;
+import org.sky.fly.entity.City;
 import org.sky.fly.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
