@@ -40,11 +40,9 @@ public class City implements Serializable {
     @TableField("population")
     private Integer population;
 
-    @Schema(description = "创建时间", requiredMode = Schema.RequiredMode.NOT_REQUIRED, accessMode = Schema.AccessMode.READ_ONLY)
     @TableField(value="create_time", fill = FieldFill.INSERT)
     private LocalDateTime createTime;
 
-    @Schema(description = "更新时间", requiredMode = Schema.RequiredMode.NOT_REQUIRED, accessMode = Schema.AccessMode.READ_ONLY)
     @TableField(value="update_time", fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime updateTime;
 
