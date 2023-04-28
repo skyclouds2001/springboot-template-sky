@@ -1,14 +1,19 @@
 package org.sky.fly.result;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
+@Schema(description = "结果返回对象")
 @Data
 public class Result<T> {
 
+    @Schema(description = "状态码", requiredMode = Schema.RequiredMode.REQUIRED, accessMode = Schema.AccessMode.READ_WRITE)
     private Integer code;
 
+    @Schema(description = "状态信息", requiredMode = Schema.RequiredMode.REQUIRED, accessMode = Schema.AccessMode.READ_WRITE)
     private String message;
 
+    @Schema(description = "返回数据", requiredMode = Schema.RequiredMode.REQUIRED, accessMode = Schema.AccessMode.READ_WRITE)
     private T data;
 
     private Result() {}
