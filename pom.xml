@@ -10,41 +10,63 @@
 
     <name>springboot-template-sky</name>
     <description>springboot template project by sky</description>
-    <url>https://github.com/skyclouds2001/springboot-template-sky/</url>
+    <url>https://github.com/skyclouds2001/springboot-template-sky</url>
     <inceptionYear>2023</inceptionYear>
+
     <licenses>
         <license>
             <name>MIT</name>
             <url>https://mit-license.org/</url>
+            <distribution>repo</distribution>
+            <comments>A granted, free of charge and for anyone license</comments>
         </license>
     </licenses>
+
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/skyclouds2001/springboot-template-sky/issues/</url>
+        <url>https://github.com/skyclouds2001/springboot-template-sky/issues</url>
     </issueManagement>
+
     <developers>
         <developer>
             <id>skyclouds2001</id>
             <name>skyclouds2001</name>
             <email>skyclouds2001@163.com</email>
-            <url>https://github.com/skyclouds2001/</url>
+            <url>https://github.com/skyclouds2001</url>
             <roles>
                 <role>Project Manager</role>
             </roles>
+            <organization>skyclouds2001</organization>
+            <organizationUrl>https://github.com/skyclouds2001</organizationUrl>
             <timezone>+8</timezone>
         </developer>
     </developers>
+
     <contributors>
         <contributor>
             <name>skyclouds2001</name>
             <email>skyclouds2001@163.com</email>
-            <url>https://github.com/skyclouds2001/</url>
+            <url>https://github.com/skyclouds2001</url>
             <roles>
                 <role>Project Manager</role>
             </roles>
+            <organization>skyclouds2001</organization>
+            <organizationUrl>https://github.com/skyclouds2001</organizationUrl>
             <timezone>+8</timezone>
         </contributor>
     </contributors>
+
+    <organization>
+        <name>skyclouds2001</name>
+        <url>https://github.com/skyclouds2001</url>
+    </organization>
+
+    <scm>
+        <tag />
+        <url>https://github.com/skyclouds2001/springboot-template-sky</url>
+        <connection>scm:git:https://github.com/skyclouds2001/springboot-template-sky.git</connection>
+        <developerConnection>scm:git:https://github.com/skyclouds2001/springboot-template-sky.git</developerConnection>
+    </scm>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -135,6 +157,39 @@
 
     <build>
         <finalName>springboot-template-sky</finalName>
+        <directory>${basedir}/target</directory>
+        <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+        <outputDirectory>${basedir}/target/classes</outputDirectory>
+        <resources>
+            <resource>
+                <targetPath>resources</targetPath>
+                <filtering>true</filtering>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <excludes>
+                    <exclude>jdbc.properties</exclude>
+                </excludes>
+            </resource>
+        </resources>
+        <testSourceDirectory>${basedir}/src/test/java</testSourceDirectory>
+        <testOutputDirectory>${basedir}/target/test-classes</testOutputDirectory>
+        <testResources>
+            <testResource>
+                <targetPath>resources</targetPath>
+                <filtering>true</filtering>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <excludes>
+                    <exclude>jdbc.properties</exclude>
+                </excludes>
+            </testResource>
+        </testResources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -178,6 +233,15 @@
             <id>aliyunmaven</id>
             <name>阿里云公共仓库</name>
             <url>https://maven.aliyun.com/repository/public</url>
+            <layout>default</layout>
         </repository>
     </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>aliyunmaven</id>
+            <name>阿里云公共仓库</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <layout>default</layout>
+        </pluginRepository>
+    </pluginRepositories>
 </project>
