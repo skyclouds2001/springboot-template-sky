@@ -146,9 +146,8 @@
         <outputDirectory>${basedir}/target/classes</outputDirectory>
         <resources>
             <resource>
-                <targetPath>resources</targetPath>
                 <filtering>true</filtering>
-                <directory>src/main/resources</directory>
+                <directory>${basedir}/src/main/resources</directory>
                 <includes>
                     <include>**/*.properties</include>
                     <include>**/*.xml</include>
@@ -162,9 +161,8 @@
         <testOutputDirectory>${basedir}/target/test-classes</testOutputDirectory>
         <testResources>
             <testResource>
-                <targetPath>resources</targetPath>
                 <filtering>true</filtering>
-                <directory>src/main/resources</directory>
+                <directory>${basedir}/src/main/resources</directory>
                 <includes>
                     <include>**/*.properties</include>
                     <include>**/*.xml</include>
