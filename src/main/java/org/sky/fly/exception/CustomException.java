@@ -1,7 +1,7 @@
 package org.sky.fly.exception;
 
 import lombok.Getter;
-import org.sky.fly.result.Code;
+import org.sky.fly.common.Code;
 
 @Getter
 public class CustomException extends RuntimeException {

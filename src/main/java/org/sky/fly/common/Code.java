@@ -1,4 +1,4 @@
-package org.sky.fly.result;
+package org.sky.fly.common;
 
 import lombok.Getter;
 
