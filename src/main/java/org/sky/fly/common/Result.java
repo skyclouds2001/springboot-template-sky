@@ -1,4 +1,4 @@
-package org.sky.fly.result;
+package org.sky.fly.common;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;

@@ -6,7 +6,7 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.sky.fly.entity.City;
-import org.sky.fly.result.Result;
+import org.sky.fly.common.Result;
 import org.sky.fly.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
