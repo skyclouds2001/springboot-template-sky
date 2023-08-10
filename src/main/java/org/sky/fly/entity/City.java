@@ -13,6 +13,13 @@ import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+/**
+ * city entity class
+ *
+ * @author skyclouds2001
+ * @version 1.0-SNAPSHOT
+ * @since 1.0-SNAPSHOT
+ */
 @Schema(description = "城市")
 @AllArgsConstructor
 @Data

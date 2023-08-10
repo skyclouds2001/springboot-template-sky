@@ -3,6 +3,13 @@ package org.sky.fly.exception;
 import lombok.Getter;
 import org.sky.fly.common.Code;
 
+/**
+ * custom exception class
+ *
+ * @author skyclouds2001
+ * @version 1.0-SNAPSHOT
+ * @since 1.0-SNAPSHOT
+ */
 @Getter
 public class CustomException extends RuntimeException {
 

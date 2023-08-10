@@ -4,6 +4,13 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.sky.fly.entity.City;
 
+/**
+ * city mapper class
+ *
+ * @author skyclouds2001
+ * @version 1.0-SNAPSHOT
+ * @since 1.0-SNAPSHOT
+ */
 @Mapper
 public interface CityMapper extends BaseMapper<City> {
 }

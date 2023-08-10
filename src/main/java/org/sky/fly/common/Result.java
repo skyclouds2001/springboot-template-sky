@@ -3,6 +3,13 @@ package org.sky.fly.common;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
+/**
+ * request response result class
+ *
+ * @author skyclouds2001
+ * @version 1.0-SNAPSHOT
+ * @since 1.0-SNAPSHOT
+ */
 @Schema(description = "结果返回对象")
 @Data
 public class Result<T> {

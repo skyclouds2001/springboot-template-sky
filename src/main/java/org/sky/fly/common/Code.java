@@ -2,6 +2,13 @@ package org.sky.fly.common;
 
 import lombok.Getter;
 
+/**
+ * code enum
+ *
+ * @author skyclouds2001
+ * @version 1.0-SNAPSHOT
+ * @since 1.0-SNAPSHOT
+ */
 @Getter
 public enum Code {
 
