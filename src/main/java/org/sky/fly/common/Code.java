@@ -12,14 +12,17 @@ import lombok.Getter;
 @Getter
 public enum Code {
 
-    SUCCESS(0,"成功"),
-    FAIL(1, "失败");
+    SUCCESS(true, 0,"成功"),
+    FAIL(false, 1, "失败");
+
+    private final Boolean success;
 
     private final Integer code;
 
     private final String message;
 
-    Code(Integer code, String message) {
+    Code(Boolean success, Integer code, String message) {
+        this.success = success;
         this.code = code;
         this.message = message;
     }
