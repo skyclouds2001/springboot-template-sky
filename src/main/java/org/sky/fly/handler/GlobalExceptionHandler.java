@@ -21,15 +21,15 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public Result<?> defaultExceptionHandler(Exception e) {
-        log.error("[Exception]", e);
+        log.error("[Exception] ", e);
         return Result.fail();
     }
 
     @ExceptionHandler(CustomException.class)
     @ResponseBody
     public Result<?> customExceptionHandler(CustomException e) {
-        log.error("[Custom Exception]", e);
-        return Result.build(null, e.getCode());
+        log.error("[Custom Exception] ", e);
+        return Result.fail(e.getCode());
     }
 
 }
