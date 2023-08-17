@@ -14,6 +14,9 @@ import lombok.Data;
 @Data
 public class Result<T> {
 
+    @Schema(description = "状态", requiredMode = Schema.RequiredMode.REQUIRED, accessMode = Schema.AccessMode.READ_WRITE)
+    private Boolean success;
+
     @Schema(description = "状态码", requiredMode = Schema.RequiredMode.REQUIRED, accessMode = Schema.AccessMode.READ_WRITE)
     private Integer code;
 
@@ -25,12 +28,8 @@ public class Result<T> {
 
     private Result() {}
 
-    protected static <T> Result<T> build(T data) {
-        return new Result<T>().data(data);
-    }
-
     public static <T> Result<T> build(T data, Code code) {
-        return build(data).code(code);
+        return new Result<T>().data(data).code(code);
     }
 
     public static<T> Result<T> ok() {
@@ -55,6 +54,7 @@ public class Result<T> {
     }
 
     public Result<T> code(Code code) {
+        this.setSuccess(code.getSuccess());
         this.setCode(code.getCode());
         this.setMessage(code.getMessage());
         return this;
