@@ -5,8 +5,9 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import org.sky.fly.entity.City;
+import jakarta.validation.Valid;
 import org.sky.fly.common.Result;
+import org.sky.fly.entity.City;
 import org.sky.fly.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,6 +15,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * city controller class
+ *
+ * @author skyclouds2001
+ * @version 1.0-SNAPSHOT
+ * @since 1.0-SNAPSHOT
+ */
 @Tag(name = "城市模块")
 @Controller
 @RequestMapping("/city")
@@ -48,14 +56,14 @@ public class CityController {
 
     @Operation(summary = "添加城市", method = "POST")
     @PostMapping
-    public Result<?> addCity(@RequestBody City city) {
+    public Result<?> addCity(@RequestBody @Valid City city) {
         cityService.save(city);
         return Result.ok();
     }
 
     @Operation(summary = "更新城市", method = "PUT")
     @PutMapping
-    public Result<?> updateCity(@RequestBody City city) {
+    public Result<?> updateCity(@RequestBody @Valid City city) {
         cityService.updateById(city);
         return Result.ok();
     }

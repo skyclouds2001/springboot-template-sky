@@ -7,6 +7,13 @@ import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+/**
+ * web-mvc configuration class
+ *
+ * @author skyclouds2001
+ * @version 1.0-SNAPSHOT
+ * @since 1.0-SNAPSHOT
+ */
 @Configuration
 @EnableWebMvc
 public class WebMvcConfig implements WebMvcConfigurer {
