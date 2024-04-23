@@ -55,10 +55,10 @@ public class City implements Serializable {
     @Max(value = Integer.MAX_VALUE, message = "city population must not be an too big integer")
     private Integer population;
 
-    @TableField(value="create_time", fill = FieldFill.INSERT)
+    @TableField(value = "create_time", fill = FieldFill.INSERT)
     private LocalDateTime createTime;
 
-    @TableField(value="update_time", fill = FieldFill.INSERT_UPDATE)
+    @TableField(value = "update_time", fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime updateTime;
 
     @TableLogic
