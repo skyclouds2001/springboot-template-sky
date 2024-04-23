@@ -32,7 +32,7 @@ public class CityController {
     private CityService cityService;
 
     @Operation(summary = "获取城市信息", method = "GET", parameters = {
-            @Parameter(name = "id", description = "城市ID", in = ParameterIn.PATH, required = true)
+            @Parameter(name = "id", description = "城市 ID", in = ParameterIn.PATH, required = true)
     })
     @GetMapping("/{id}")
     public Result<City> getCity(@PathVariable Integer id) {
@@ -69,7 +69,7 @@ public class CityController {
     }
 
     @Operation(summary = "删除城市", method = "DELETE", parameters = {
-            @Parameter(name = "id", description = "城市ID", in = ParameterIn.PATH, required = true),
+            @Parameter(name = "id", description = "城市 ID", in = ParameterIn.PATH, required = true),
     })
     @DeleteMapping("/{id}")
     public Result<?> removeCity(@PathVariable Integer id) {
