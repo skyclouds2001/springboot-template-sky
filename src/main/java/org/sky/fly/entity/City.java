@@ -56,10 +56,10 @@ public class City implements Serializable {
     private Integer population;
 
     @TableField(value = "create_time", fill = FieldFill.INSERT)
-    private LocalDateTime createTime;
+    private LocalDateTime create_time;
 
     @TableField(value = "update_time", fill = FieldFill.INSERT_UPDATE)
-    private LocalDateTime updateTime;
+    private LocalDateTime update_time;
 
     @TableLogic
     private Integer deleted;
