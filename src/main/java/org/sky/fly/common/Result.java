@@ -29,7 +29,7 @@ public class Result<T> {
     private T data;
 
     public static<T> Result<T> ok() {
-        return Result.ok(null);
+        return Result.ok(null, Code.SUCCESS);
     }
 
     public static<T> Result<T> ok(T data) {
@@ -48,7 +48,7 @@ public class Result<T> {
     }
 
     public static<T> Result<T> fail() {
-        return Result.fail(null);
+        return Result.fail(null, Code.FAIL);
     }
 
     public static<T> Result<T> fail(T data) {
