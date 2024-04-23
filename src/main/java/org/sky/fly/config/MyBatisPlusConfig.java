@@ -14,8 +14,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * mybatis-plus configuration class
  *
  * @author skyclouds2001
- * @version 1.0-SNAPSHOT
- * @since 1.0-SNAPSHOT
+ * @version 1.0.0
+ * @since 1.0.0
  */
 @Configuration
 @MapperScan("org.sky.fly.mapper")

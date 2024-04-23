@@ -12,8 +12,8 @@ import org.springframework.context.annotation.Configuration;
  * knife4j configuration class
  *
  * @author skyclouds2001
- * @version 1.0-SNAPSHOT
- * @since 1.0-SNAPSHOT
+ * @version 1.0.0
+ * @since 1.0.0
  */
 @Configuration
 @EnableKnife4j

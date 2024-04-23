@@ -17,8 +17,8 @@ import java.time.LocalDateTime;
  * city entity class
  *
  * @author skyclouds2001
- * @version 1.0-SNAPSHOT
- * @since 1.0-SNAPSHOT
+ * @version 1.0.0
+ * @since 1.0.0
  */
 @Schema(description = "城市")
 @AllArgsConstructor

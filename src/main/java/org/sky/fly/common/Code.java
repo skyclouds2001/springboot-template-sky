@@ -6,8 +6,8 @@ import lombok.Getter;
  * code enum
  *
  * @author skyclouds2001
- * @version 1.0-SNAPSHOT
- * @since 1.0-SNAPSHOT
+ * @version 1.0.0
+ * @since 1.0.0
  */
 @Getter
 public enum Code {

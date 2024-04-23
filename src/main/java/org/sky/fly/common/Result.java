@@ -8,8 +8,8 @@ import lombok.Data;
  * request response result class
  *
  * @author skyclouds2001
- * @version 1.0-SNAPSHOT
- * @since 1.0-SNAPSHOT
+ * @version 1.0.0
+ * @since 1.0.0
  */
 @Schema(description = "结果返回对象")
 @Builder

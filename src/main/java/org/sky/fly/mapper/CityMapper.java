@@ -8,8 +8,8 @@ import org.sky.fly.entity.City;
  * city mapper class
  *
  * @author skyclouds2001
- * @version 1.0-SNAPSHOT
- * @since 1.0-SNAPSHOT
+ * @version 1.0.0
+ * @since 1.0.0
  */
 @Mapper
 public interface CityMapper extends BaseMapper<City> {

@@ -19,8 +19,8 @@ import java.util.List;
  * city controller class
  *
  * @author skyclouds2001
- * @version 1.0-SNAPSHOT
- * @since 1.0-SNAPSHOT
+ * @version 1.0.0
+ * @since 1.0.0
  */
 @Tag(name = "城市模块")
 @Controller
