@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
 
     <name>springboot-template-sky</name>
-    <description>springboot template project by sky</description>
+    <description>an opinionated springboot starter template</description>
     <url>https://github.com/skyclouds2001/springboot-template-sky</url>
     <inceptionYear>2023</inceptionYear>
 
