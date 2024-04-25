@@ -8,6 +8,7 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -24,6 +25,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Data
 @NoArgsConstructor
+@Accessors(chain = true)
 @TableName("city")
 public class City implements Serializable {
 
