@@ -3,6 +3,7 @@ package org.sky.fly.controller;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.Parameters;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
@@ -31,17 +32,19 @@ public class CityController {
     @Autowired
     private CityService cityService;
 
-    @Operation(summary = "获取城市信息", method = "GET", parameters = {
-            @Parameter(name = "id", description = "城市 ID", in = ParameterIn.PATH, required = true)
+    @Operation(summary = "获取城市信息", method = "GET")
+    @Parameters({
+        @Parameter(name = "id", description = "城市 ID", in = ParameterIn.PATH, required = true)
     })
     @GetMapping("/{id}")
     public Result<City> getCity(@PathVariable Integer id) {
         return Result.ok(cityService.getById(id));
     }
 
-    @Operation(summary = "获取城市分页列表", method = "GET", parameters = {
-            @Parameter(name = "page", description = "分页页码", in = ParameterIn.QUERY),
-            @Parameter(name = "size", description = "分页容量", in = ParameterIn.QUERY)
+    @Operation(summary = "获取城市分页列表", method = "GET")
+    @Parameters({
+        @Parameter(name = "page", description = "分页页码", in = ParameterIn.QUERY),
+        @Parameter(name = "size", description = "分页容量", in = ParameterIn.QUERY)
     })
     @GetMapping
     public Result<Page<City>> getCityList(@RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "10") Integer size) {
@@ -68,8 +71,9 @@ public class CityController {
         return Result.ok();
     }
 
-    @Operation(summary = "删除城市", method = "DELETE", parameters = {
-            @Parameter(name = "id", description = "城市 ID", in = ParameterIn.PATH, required = true),
+    @Operation(summary = "删除城市", method = "DELETE")
+    @Parameters({
+        @Parameter(name = "id", description = "城市 ID", in = ParameterIn.PATH, required = true),
     })
     @DeleteMapping("/{id}")
     public Result<?> removeCity(@PathVariable Integer id) {
