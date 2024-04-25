@@ -35,7 +35,8 @@ public class Knife4jConfig {
                         .license(new License()
                                 .name("MIT")
                                 .url("https://mit-license.org/")
-                        ));
+                        )
+                        .summary("big-data-monitor-system 接口文档"));
     }
 
 }
