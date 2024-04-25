@@ -63,6 +63,9 @@ public class City implements Serializable {
     @TableField(value = "update_time", fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime update_time;
 
+    @TableField(value = "tenant_id", fill = FieldFill.INSERT)
+    private Long tenant_id;
+
     @TableLogic
     private Integer deleted;
 
