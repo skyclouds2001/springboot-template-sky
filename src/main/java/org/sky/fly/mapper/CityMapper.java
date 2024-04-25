@@ -13,4 +13,7 @@ import org.sky.fly.entity.City;
  */
 @Mapper
 public interface CityMapper extends BaseMapper<City> {
+
+    Integer count();
+
 }
