@@ -7,7 +7,7 @@ import org.sky.fly.common.Code;
  * custom exception class
  *
  * @author skyclouds2001
- * @version 1.0.0
+ * @version 1.1.0
  * @since 1.0.0
  */
 @Getter

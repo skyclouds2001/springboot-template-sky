@@ -8,7 +8,7 @@ import org.sky.fly.entity.City;
  * city mapper class
  *
  * @author skyclouds2001
- * @version 1.0.0
+ * @version 1.1.0
  * @since 1.0.0
  */
 @Mapper

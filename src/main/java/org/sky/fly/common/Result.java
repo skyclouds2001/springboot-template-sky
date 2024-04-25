@@ -8,7 +8,7 @@ import lombok.Data;
  * request response result class
  *
  * @author skyclouds2001
- * @version 1.0.0
+ * @version 1.1.0
  * @since 1.0.0
  */
 @Schema(description = "结果返回对象")
