@@ -1,7 +1,6 @@
-package org.sky.fly.exception;
+package org.sky.fly.common;
 
 import lombok.Getter;
-import org.sky.fly.common.Code;
 
 /**
  * custom exception class
