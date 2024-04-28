@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 @SpringBootTest
-public class CityServiceTest {
+class CityServiceTest {
 
     @Autowired
     CityService cityService;
