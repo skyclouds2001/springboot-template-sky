@@ -1,7 +1,7 @@
 package org.sky.fly.handler;
 
 import lombok.extern.slf4j.Slf4j;
-import org.sky.fly.exception.CustomException;
+import org.sky.fly.common.CustomException;
 import org.sky.fly.common.Result;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * global exception handler
  *
  * @author skyclouds2001
- * @version 1.0-SNAPSHOT
- * @since 1.0-SNAPSHOT
+ * @version 1.1.0
+ * @since 1.0.0
  */
 @ControllerAdvice
 @Slf4j

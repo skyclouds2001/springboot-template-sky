@@ -12,8 +12,8 @@ import org.springframework.context.annotation.Configuration;
  * knife4j configuration class
  *
  * @author skyclouds2001
- * @version 1.0-SNAPSHOT
- * @since 1.0-SNAPSHOT
+ * @version 1.1.0
+ * @since 1.0.0
  */
 @Configuration
 @EnableKnife4j
@@ -23,9 +23,9 @@ public class Knife4jConfig {
     public OpenAPI openAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("SpringBootTemplateSky接口文档")
-                        .version("1.0-SNAPSHOT")
-                        .description("springboot template project api document by sky")
+                        .title("springboot-template-sky 接口文档")
+                        .version("1.1.0")
+                        .description("springboot-template-sky 接口文档")
                         .termsOfService("https://skyclouds2001.github.io/")
                         .contact(new Contact()
                                 .name("skyclouds2001")
@@ -35,7 +35,8 @@ public class Knife4jConfig {
                         .license(new License()
                                 .name("MIT")
                                 .url("https://mit-license.org/")
-                        ));
+                        )
+                        .summary("springboot-template-sky 接口文档"));
     }
 
 }

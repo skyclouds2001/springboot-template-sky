@@ -7,11 +7,11 @@ import org.sky.fly.service.CityService;
 import org.springframework.stereotype.Service;
 
 /**
- * city service implements class
+ * city service implement class
  *
  * @author skyclouds2001
- * @version 1.0-SNAPSHOT
- * @since 1.0-SNAPSHOT
+ * @version 1.0.0
+ * @since 1.0.0
  */
 @Service
 public class CityServiceImpl extends ServiceImpl<CityMapper, City> implements CityService {

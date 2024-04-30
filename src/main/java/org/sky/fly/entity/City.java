@@ -8,6 +8,7 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -17,13 +18,14 @@ import java.time.LocalDateTime;
  * city entity class
  *
  * @author skyclouds2001
- * @version 1.0-SNAPSHOT
- * @since 1.0-SNAPSHOT
+ * @version 1.1.0
+ * @since 1.0.0
  */
 @Schema(description = "城市")
 @AllArgsConstructor
 @Data
 @NoArgsConstructor
+@Accessors(chain = true)
 @TableName("city")
 public class City implements Serializable {
 
@@ -55,11 +57,14 @@ public class City implements Serializable {
     @Max(value = Integer.MAX_VALUE, message = "city population must not be an too big integer")
     private Integer population;
 
-    @TableField(value="create_time", fill = FieldFill.INSERT)
-    private LocalDateTime createTime;
+    @TableField(value = "create_time", fill = FieldFill.INSERT)
+    private LocalDateTime create_time;
 
-    @TableField(value="update_time", fill = FieldFill.INSERT_UPDATE)
-    private LocalDateTime updateTime;
+    @TableField(value = "update_time", fill = FieldFill.INSERT_UPDATE)
+    private LocalDateTime update_time;
+
+    @TableField(value = "tenant_id", fill = FieldFill.INSERT)
+    private Long tenant_id;
 
     @TableLogic
     private Integer deleted;

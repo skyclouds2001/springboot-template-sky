@@ -9,8 +9,8 @@ import org.springframework.transaction.annotation.Transactional;
  * city service interface
  *
  * @author skyclouds2001
- * @version 1.0-SNAPSHOT
- * @since 1.0-SNAPSHOT
+ * @version 1.0.0
+ * @since 1.0.0
  */
 @Transactional
 public interface CityService extends IService<City> {

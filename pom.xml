@@ -5,11 +5,11 @@
 
     <groupId>org.sky.fly</groupId>
     <artifactId>springboot-template-sky</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <packaging>jar</packaging>
 
     <name>springboot-template-sky</name>
-    <description>springboot template project by sky</description>
+    <description>an opinionated springboot starter template</description>
     <url>https://github.com/skyclouds2001/springboot-template-sky</url>
     <inceptionYear>2023</inceptionYear>
 
@@ -71,7 +71,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.4</version>
+        <version>3.2.5</version>
         <relativePath/>
     </parent>
 
@@ -88,7 +88,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-validation</artifactId>
-                <version>3.2.4</version>
+                <version>3.2.5</version>
             </dependency>
 
             <dependency>
@@ -149,8 +149,19 @@
             <artifactId>mysql-connector-j</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>3.0.3</version>
+        </dependency>
+        <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.mybatis</groupId>
+                    <artifactId>mybatis-spring</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>p6spy</groupId>
