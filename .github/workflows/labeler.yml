@@ -50,7 +50,7 @@ jobs:
                         Note this PR might be rejected due to its size.
     label-rebase-needed:
         name: Label for PR merge conflict
-        if: github.repository == 'skyclouds2001/big-data-monitor-system'
+        if: github.repository == 'skyclouds2001/springboot-template-sky'
         timeout-minutes: 60
         runs-on: ubuntu-latest
         steps:
