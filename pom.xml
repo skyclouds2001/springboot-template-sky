@@ -232,8 +232,26 @@
                     </configuration>
                     <executions>
                         <execution>
-                            <id>validate</id>
+                            <id>run-codestyle</id>
                             <phase>validate</phase>
+                            <goals>
+                                <goal>check</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>com.github.spotbugs</groupId>
+                    <artifactId>spotbugs-maven-plugin</artifactId>
+                    <version>4.8.6.0</version>
+                    <configuration>
+                        <effort>Max</effort>
+                        <threshold>Low</threshold>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>run-spotbugs</id>
+                            <phase>test</phase>
                             <goals>
                                 <goal>check</goal>
                             </goals>
@@ -251,6 +269,10 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+            </plugin>
         </plugins>
     </build>
 
@@ -267,6 +289,22 @@
                     <failsOnError>true</failsOnError>
                     <skip>false</skip>
                     <violationSeverity>error</violationSeverity>
+                </configuration>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>check</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>4.8.6.0</version>
+                <configuration>
+                    <effort>Max</effort>
+                    <threshold>Low</threshold>
                 </configuration>
                 <reportSets>
                     <reportSet>
