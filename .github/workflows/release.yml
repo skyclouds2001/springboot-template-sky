@@ -10,7 +10,7 @@ permissions:
 
 jobs:
     github-release:
-        name: Release to github release
+        name: Publish github release
         if: github.repository == 'skyclouds2001/springboot-template-sky'
         timeout-minutes: 60
         runs-on: ubuntu-latest
