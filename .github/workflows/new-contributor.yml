@@ -18,7 +18,7 @@ permissions:
 jobs:
     new-contributor:
         name: Welcome new contributor
-        if: github.repository == github.event.pull_request.head.repo.full_name
+        if: github.repository == 'skyclouds2001/springboot-template-sky'
         timeout-minutes: 60
         runs-on: ubuntu-latest
         steps:
