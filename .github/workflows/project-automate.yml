@@ -7,7 +7,6 @@ on:
             - reopened
             - transferred
     pull_request:
-
         types:
             - opened
             - reopened
