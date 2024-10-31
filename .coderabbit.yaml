@@ -24,10 +24,12 @@ reviews:
     drafts: false
     base_branches: []
   tools:
+    ast-grep:
+      essential_rules: true
     shellcheck:
       enabled: true
     ruff:
-      enabled: true
+      enabled: false
     markdownlint:
       enabled: true
     github-checks:
@@ -38,16 +40,15 @@ reviews:
       enabled_only: false
       level: default
     biome:
-      enabled: true
+      enabled: false
     hadolint:
       enabled: true
     swiftlint:
-      enabled: true
+      enabled: false
     phpstan:
-      enabled: true
-      level: default
+      enabled: false
     golangci-lint:
-      enabled: true
+      enabled: false
     yamllint:
       enabled: true
     gitleaks:
@@ -57,19 +58,23 @@ reviews:
     detekt:
       enabled: true
     eslint:
-      enabled: true
+      enabled: false
     rubocop:
-      enabled: true
+      enabled: false
     buf:
-      enabled: true
+      enabled: false
     regal:
-      enabled: true
+      enabled: false
     actionlint:
       enabled: true
     pmd:
       enabled: true
     cppcheck:
+      enabled: false
+    semgrep:
       enabled: true
+    circleci:
+      enabled: false
 chat:
   auto_reply: true
 knowledge_base:
