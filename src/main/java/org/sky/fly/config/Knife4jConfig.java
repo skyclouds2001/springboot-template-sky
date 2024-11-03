@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * knife4j configuration class
  *
  * @author skyclouds2001
- * @version 1.5.0
+ * @version 1.6.0
  * @since 1.0.0
  */
 @Configuration
@@ -24,7 +24,7 @@ public class Knife4jConfig {
         return new OpenAPI()
                 .info(new Info()
                         .title("springboot-template-sky 接口文档")
-                        .version("1.1.0")
+                        .version("1.6.0")
                         .description("springboot-template-sky 接口文档")
                         .termsOfService("https://skyclouds2001.github.io/")
                         .contact(new Contact()
