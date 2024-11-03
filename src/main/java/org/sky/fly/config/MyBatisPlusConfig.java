@@ -22,7 +22,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * mybatis-plus configuration class
  *
  * @author skyclouds2001
- * @version 1.5.0
+ * @version 1.6.0
  * @since 1.0.0
  */
 @Configuration
