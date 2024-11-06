@@ -1,6 +1,7 @@
 package org.sky.fly.config;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
@@ -11,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * web-mvc configuration class
  *
  * @author skyclouds2001
- * @version 1.1.0
+ * @version 1.7.0
  * @since 1.0.0
  */
 @Configuration
@@ -19,7 +20,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebMvcConfig implements WebMvcConfigurer {
 
     @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+    public void addResourceHandlers(@NonNull ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/**")
                 .addResourceLocations("classpath:/public/")
                 .addResourceLocations("classpath:/resources/")
@@ -28,7 +29,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     }
 
     @Override
-    public void configurePathMatch(PathMatchConfigurer configurer) {
+    public void configurePathMatch(@NonNull PathMatchConfigurer configurer) {
         configurer.addPathPrefix("/api", c -> c.isAnnotationPresent(Controller.class));
     }
 
