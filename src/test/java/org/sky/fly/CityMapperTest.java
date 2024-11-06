@@ -26,7 +26,7 @@ class CityMapperTest {
 
     @Test
     void testSelectByBatchIds() {
-        List<City> cities = cityMapper.selectBatchIds(Arrays.asList(1, 2, 3));
+        List<City> cities = cityMapper.selectByIds(Arrays.asList(1, 2, 3));
         cities.forEach(System.out::println);
     }
 
